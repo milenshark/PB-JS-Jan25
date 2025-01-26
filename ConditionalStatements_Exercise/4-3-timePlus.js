@@ -7,7 +7,7 @@ function timePlus(hours, minutes) {
 
     minutes = minutes + 15;
 
-    if (minutes > 60) {
+    if (minutes >= 60) {
         hours ++;
         minutes = minutes - 60;
     }
