@@ -1,21 +1,20 @@
-function fruitMarket(input) {
-    let strawberryPrice = Number(input[0]);
-    let bananasKg = Number(input[1]);
-    let orangesKg = Number(input[2]);
-    let raspberriesKg = Number(input[3]);
-    let strawberriesKg = Number(input[4]);
-
+function fruitMarket(strawberryPrice, bananaKg, orangeKg, raspberryKg, strawberryKg) {
     let raspberryPrice = strawberryPrice / 2;
-    let orangePrice = raspberryPrice * 0.6; // 40% по-ниска = 60% от цената
-    let bananaPrice = raspberryPrice * 0.2; // 80% по-ниска = 20% от цената
+    let orangePrice = raspberryPrice * 0.6;
+    let bananaPrice = raspberryPrice * 0.2;
 
-    let total = (strawberriesKg * strawberryPrice) +
-                (raspberriesKg * raspberryPrice) +
-                (orangesKg * orangePrice) +
-                (bananasKg * bananaPrice);
+    let total =
+        (strawberryKg * strawberryPrice) +
+        (raspberryKg * raspberryPrice) +
+        (orangeKg * orangePrice) +
+        (bananaKg * bananaPrice);
 
     console.log(total.toFixed(2));
 }
 
-
-fruitMarket(["48", "10", "3.3", "6.5", "1.7"]);
+fruitMarket(48,
+    10,
+    3.3,
+    6.5,
+    1.7,
+    );
